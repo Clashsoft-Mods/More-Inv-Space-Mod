@@ -1,11 +1,10 @@
 package clashsoft.mods.moreinvspace;
 
 import clashsoft.cslib.math.Point2i;
+import clashsoft.playerinventoryapi.CreativeInventory;
+import clashsoft.playerinventoryapi.SurvivalInventory;
 import clashsoft.playerinventoryapi.api.IInventoryHandler;
 import clashsoft.playerinventoryapi.api.ISlotList;
-import clashsoft.playerinventoryapi.client.gui.GuiCreativeInventory;
-import clashsoft.playerinventoryapi.client.gui.GuiSurvivalInventory;
-import clashsoft.playerinventoryapi.inventory.InventorySlots;
 import clashsoft.playerinventoryapi.lib.ExtendedInventory;
 
 import net.minecraft.client.gui.GuiButton;
@@ -15,24 +14,24 @@ import net.minecraft.inventory.Slot;
 public class MISSlotHandler implements IInventoryHandler
 {
 	@Override
-	public void pre(EntityPlayer player, boolean creative)
+	public void pre(Point2i[] slots, EntityPlayer player, boolean creative)
 	{	
 		if (creative)
 		{
-			GuiCreativeInventory.windowHeight = 154;
-			GuiCreativeInventory.binSlotY = 130;
+			CreativeInventory.windowHeight = 154;
+			CreativeInventory.binSlotY = 130;
 			for (int i = 0; i < 9; i++)
 			{
-				Point2i p = InventorySlots.creativeSlots[i + 36];
+				Point2i p = slots[i + 36];
 				p.y = 130;
 			}
 		}
 		else
 		{
-			GuiSurvivalInventory.windowHeight = 184;
+			SurvivalInventory.windowHeight = 184;
 			for (int i = 0; i < 9; i++)
 			{
-				Point2i p = InventorySlots.survivalSlots[i + 36];
+				Point2i p = slots[i + 36];
 				p.y = 160;
 			}
 		}
