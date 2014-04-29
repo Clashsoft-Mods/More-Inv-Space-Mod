@@ -16,8 +16,8 @@ public class MoreInvSpaceMod extends ClashsoftMod
 {
 	public static final String		MODID	= "moreinvspace";
 	public static final String		NAME	= "More Inventory Space Mod";
-	public static final String		ACRONYM	= "mis";
-	public static final String		VERSION	= CSUpdate.CURRENT_VERSION + "-1.0.0-dev";
+	public static final String		ACRONYM	= "mism";
+	public static final String		VERSION	= CSUpdate.CURRENT_VERSION + "-1.0.0";
 	
 	@Instance(MODID)
 	public static MoreInvSpaceMod	instance;
