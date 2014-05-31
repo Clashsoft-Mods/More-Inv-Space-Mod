@@ -1,6 +1,6 @@
 package clashsoft.mods.moreinvspace;
 
-import clashsoft.cslib.minecraft.ClashsoftMod;
+import clashsoft.cslib.minecraft.init.ClashsoftMod;
 import clashsoft.cslib.minecraft.update.CSUpdate;
 import clashsoft.playerinventoryapi.PlayerInventoryAPI;
 import cpw.mods.fml.common.Mod;
